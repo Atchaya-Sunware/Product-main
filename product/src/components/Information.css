@@ -1,0 +1,187 @@
+.info-container {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 20px 0;
+  }
+  
+  .info-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #023047;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .info-icon {
+    background-color: #219EBC;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  .info-panel {
+    background-color: #f1faff;
+    border: 1px solid #219EBC;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .info-close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #023047;
+    cursor: pointer;
+  }
+  
+  .info-section-title {
+    color: #023047;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .info-section-subtitle {
+    font-size: 14px;
+    color: #023047;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .scoring-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .scoring-grid-item {
+    background-color: #8ECAE6;
+    padding: 10px;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+  }
+  
+  .recommendations-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .recommendations-table th {
+    background-color: #219EBC;
+    color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .recommendations-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .recommendations-table td:first-child {
+    font-weight: bold;
+  }
+  
+  .product-name {
+    font-weight: 600;
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+  
+  .product-details {
+    font-size: 12px;
+    color: gray;
+    text-align: left;
+  }
+  
+  .score-cell {
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .total-score {
+    background-color: #FFB703;
+    color: #023047;
+    font-weight: bold;
+  }
+  
+  .price-cell {
+    color: #FB8500;
+    font-weight: bold;
+  }
+  
+  .rank-badge {
+    background-color: #FB8500;
+    color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: bold;
+  }
+  
+  .highlighted-cell {
+    background-color: #8ECAE6;
+  }
+  
+  .loading-state,
+  .error-state,
+  .no-recommendations {
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .pagination-container {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .pagination-button {
+    padding: 5px 10px;
+    background-color: #219EBC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination-button.active {
+    background-color: #023047;
+  }
+  
+  .pagination-info {
+    font-size: 12px;
+    color: gray;
+  }
+  

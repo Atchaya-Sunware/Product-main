@@ -1,0 +1,551 @@
+/* Add these styles to your Home.css file */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Adjusted column width */
+    gap: 1px; /* Add space between cards */
+    margin: 0 auto; /* Center the grid */
+    padding: 20px 0;
+
+  }
+  
+  .product-card {
+    width: 255px; /* Fixed width for consistency */
+    height: 453px; /* Increased height to accommodate content */
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; /* Slightly rounded corners */
+    padding: 20px; /* Increased padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-image {
+    padding: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .product-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:45px 0px;
+  }
+  
+  .product-title {
+    font-size: 12px;
+    font-weight: 500px;
+    margin-bottom: 10px;
+    min-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  .product-title:hover{
+    color: #1733d0; /* Change the color to blue like a typical link */
+  text-decoration: underline; /* Add underline on hover */
+  cursor: pointer;
+  }
+
+  
+
+  
+  .card-img-container {
+    height: 250px; /* Increased height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border-radius: 8px;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Change to contain to avoid image distortion */
+    background-color: #f9f9f9; /* Light background for product images */
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover .card-img-top {
+    transform: scale(1.05);
+  }
+  .card-price {
+    font-size: 18px;
+  font-weight: 500;
+  color: #040697;
+  margin-bottom: 5px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .card-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  
+
+  .card-title {
+    font-size: 0.95rem;
+    font-weight:500px;
+    color: #333;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    height: 2.6em; /* Enough height for 2 lines */
+  }
+  
+  .card-title:hover {
+    color: #007bff; /* Change the color to blue like a typical link */
+    text-decoration: underline; /* Add underline on hover */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+  }
+
+  .btn-warning {
+    background-color: #FFD814;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 500;
+    margin-top: auto;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-warning:hover {
+    background-color: #FFC300;
+
+  }
+  
+  .btn-warning:focus {
+    box-shadow: 0 0 0 3px rgba(255, 216, 20, 0.4);
+  }
+
+  /* No products message */
+.no-products-message {
+    grid-column: 1 / -1; /* Span all columns */
+  }
+
+  @media (max-width: 768px) {
+    .product-card {
+      /* Make the card fit more naturally on smaller screens */
+      margin-bottom: 15px;
+    }
+  
+    .card-title {
+      font-size: 0.9rem;
+    }
+
+    .card-title:hover {
+      color: #007bff; /* Change the color to blue like a typical link */
+      text-decoration: underline; /* Add underline on hover */
+      cursor: pointer; /* Change cursor to indicate it's clickable */
+    }
+  
+    .card-price {
+      font-size: 18px;
+      font-weight: 500;
+      color: #040697;
+      margin-bottom: 5px;
+      }
+  }
+
+  /* Responsive adjustments */
+@media (max-width: 992px) {
+    .products-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .products-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .card-img-container {
+        height: 180px;
+      }
+    }
+  
+    @media (max-width: 576px) {
+        .products-grid {
+          grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+          gap: 10px;
+        }
+        
+        .card-title {
+          font-size: 0.85rem;
+        }
+        
+        .card-price {
+          font-size: 1rem;
+        }
+
+        .card-title:hover {
+          color: #f88d1a; /* Change the color to blue like a typical link */
+          text-decoration: underline; /* Add underline on hover */
+          cursor: pointer; /* Change cursor to indicate it's clickable */
+        }
+        
+        .btn-warning {
+          background-color: #FFD814;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: 500;
+  margin-top: auto;
+  transition: background-color 0.3s;
+        }
+      }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating-container {
+    color: #007185;
+    font-size: 0.85rem;
+  }
+  
+  .price-container {
+    margin-top: 4px;
+  }
+  
+  .text-danger {
+    color: #B12704 !important;
+  }
+  
+
+  
+  .search-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Make it more responsive */
+  @media (max-width: 767px) {
+    .filter-sidebar {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Price range slider styling */
+  .slider-control {
+    height: 2px;
+    background: #ddd;
+    margin: 20px 10px;
+  }
+  
+  .slider-control .slider-handle {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 2px solid #f0c14b;
+    border-radius: 50%;
+    top: -8px;
+    cursor: pointer;
+  }
+  
+  .slider-control .slider-track {
+    height: 100%;
+    background: #f0c14b;
+  }
+  
+  .price-range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+
+  /* Categories Dropdown Styles */
+.categories-dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .categories-toggle {
+    background-color: transparent; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .categories-toggle:hover {
+    color: #f0c14b;
+  }
+  
+  .categories-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    min-width: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 8px 0;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  }
+  
+  .categories-dropdown-menu .category-item {
+    padding: 8px 20px;
+    display: block;
+    width: 100%;
+    clear: both;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+    border-bottom: none;
+  }
+  
+  .categories-dropdown-menu .category-item:hover {
+    background-color: #f5f5f5;
+    color: #007bff;
+  }
+  
+  .categories-dropdown-menu .category-item::after {
+    display: none;
+  }
+  
+  .categories-dropdown-menu .category-item.active {
+    color: #fff;
+    background-color: #007bff;
+  }
+  
+  /* Add scrollbar styling for the dropdown */
+  .categories-dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .categories-dropdown-menu::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .categories-dropdown-menu::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .categories-dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  /* Professional Categories scrollable container styles */
+  .categories-scroll-container {
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .categories-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 10px 15px;
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .categories-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .categories-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .categories-scroll::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .categories-scroll::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .category-item {
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+    display: inline-block;
+    flex-shrink: 0;
+    border-bottom: 2px solid transparent;
+    position: relative;
+  }
+  
+  .category-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background-color: #e5e5e5;
+  }
+  
+  .category-item:hover {
+    background-color: #f9f9f9;
+    color: #94be32;
+  }
+  
+  .category-item.active {
+    color: #de206c;
+    font-weight: 500;
+    border-bottom-color: #007bff;
+  }
+  
+  /* Add dropdown indicator for more professional look */
+  .categories-scroll-container::before,
+  .categories-scroll-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0.8;
+  }
+  
+  .categories-scroll-container::before {
+    left: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23555' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .categories-scroll-container::after {
+    right: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23555' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Add additional responsive styling */
+  @media (max-width: 768px) {
+    .categories-scroll {
+      padding: 8px 10px;
+    }
+    
+    .category-item {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+    
+    
+  }
+  
+  /* For very small screens */
+  @media (max-width: 576px) {
+    .category-item {
+      padding: 5px 10px;
+      font-size: 0.85rem;
+    }
+  }
+
+  .footer {
+    background-color: #232f3e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
+  .footer a:hover {
+    color: #f0c14b;
+  }
+  
+  @media (max-width: 768px) {
+    .categories-scroll {
+      padding: 10px 0;
+    }
+  
+    .product-card {
+      width: 100%;
+    }
+  
+    .product-title {
+      font-size: 1rem;
+    }
+  
+    .card-price {
+      font-size: 1.2rem;
+    }
+  
+    .add-to-cart-btn {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .category-item {
+      font-size: 0.85rem;
+    }
+  
+    .search-input {
+      font-size: 0.9rem;
+    }
+  }
+  

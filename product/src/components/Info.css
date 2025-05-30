@@ -1,0 +1,54 @@
+.info-heading {
+    color: #023047;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .info-table-container {
+    overflow-x: auto;
+  }
+  
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .info-table th {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #219EBC;
+    color: white;
+  }
+  
+  .info-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .info-table td:first-child {
+    text-align: left;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .info-table tbody tr:nth-child(even) {
+    background-color: #8ECAE6;
+  }
+  
+  .info-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  .info-table .total-score {
+    background-color: #FFB703;
+    font-weight: bold;
+    color: #023047;
+  }
+  

@@ -1,0 +1,251 @@
+/* Recommendation Slider Styles */
+.recommendations-slider-wrapper {
+  margin: 20px -5vw;
+  padding: 1px 0;
+  position: relative;
+  overflow: visible;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.star-icon {
+  font-size: 16px;
+  margin: 0 1px;
+}
+
+.rating-count {
+  font-size: 12px;
+  color: #007185;
+  margin-left: 5px;
+}
+
+.product-card {
+  padding: -1px;
+  height: 100%;width:248px;
+  border-radius: 20px;
+}
+
+.product-card .card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  height: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card .card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.product-card-img-container {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 10px;
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.product-card-img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  background-color: #f8f8f8;
+}
+
+.product-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.product-card .card-title {
+  font-size: 14px;
+  margin-bottom: 10px;
+  min-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.product-card .card-title:hover {
+  color: #f88d1a; /* Change the color to blue like a typical link */
+  text-decoration: underline; /* Add underline on hover */
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+}
+
+.product-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card .card-text {
+  font-weight: 500;
+  color: #0f0e0e;
+  margin-top: auto;
+  text-align: center;
+}
+
+.product-card-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.card-title:hover {
+  color: #007bff; /* Change the color to blue like a typical link */
+  text-decoration: underline; /* Add underline on hover */
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+}
+
+.product-card-price {
+  font-weight: 500;
+  color: #0f0e0e;
+  text-align: center;
+  margin-top: auto;
+}
+
+.product-price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+}
+
+/* Custom Arrow Styling */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.custom-prev-arrow {
+  left: -60px;
+}
+
+.custom-next-arrow {
+  right: -60px;
+}
+
+.arrow-icon {
+  font-size: 25px;
+  color: #333;
+}
+
+/* Pagination Info */
+.pagination-info {
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .custom-prev-arrow {
+    left: -45px;
+  }
+
+  .custom-next-arrow {
+    right: -45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-prev-arrow {
+    left: -30px;
+  }
+
+  .custom-next-arrow {
+    right: -30px;
+  }
+}
+
+/* Slick Slider Overrides */
+.slick-track {
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.slick-slide {
+  height: auto;
+}
+
+.slick-slide > div {
+  height: 100%;
+}
+
+/* .slick-prev:before,
+.slick-next:before {
+  display: none;
+  color: rgb(97, 90, 90);
+} */
+
+/* Loading Spinner */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #1b0a64;
+  padding: 20px;
+}
+
+
+/* Additional Responsive Adjustments */
+@media (max-width: 480px) {
+  .product-card-img-container {
+    height: 150px;
+  }
+  
+  .product-card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-title:hover {
+    color: #007bff; /* Change the color to blue like a typical link */
+    text-decoration: underline; /* Add underline on hover */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+  }
+  
+  .product-card-price {
+    font-size: 0.9rem;
+  }
+  
+  .rating-count {
+    font-size: 0.8rem;
+  }
+}
